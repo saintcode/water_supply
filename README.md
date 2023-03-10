@@ -1,13 +1,5 @@
-![Ruby](https://github.com/ryanwi/rails7-on-docker/workflows/Ruby/badge.svg)
 
-Start here: https://github.com/ryanwi/rails7-on-docker/generate
-
-# Rails 7 on Docker demo application
-
-This app demonstrates Rails 7 with PostgreSQL, import maps, turbo, stimulus and hotwire, all running in Docker.
-
-**NOTE:** [There is also an example Rails 6 application working in Docker with Webpacker](https://github.com/ryanwi/rails-on-docker)
-
+Water supply
 ## Features
 
 * Rails 7
@@ -15,23 +7,11 @@ This app demonstrates Rails 7 with PostgreSQL, import maps, turbo, stimulus and 
 * Dockerfile and Docker Compose configuration
 * PostgreSQL database
 * Redis
-* GitHub Actions for 
+* GitHub Actions for
   * tests
   * Rubocop for linting
   * Security checks with [Brakeman](https://github.com/presidentbeef/brakeman) and [bundler-audit](https://github.com/rubysec/bundler-audit)
 * Dependabot for automated updates
-
-## Requirements
-
-Please ensure you are using Docker Compose V2. This project relies on the `docker compose` command, not the previous `docker-compose` standalone program.
-
-https://docs.docker.com/compose/#compose-v2-and-the-new-docker-compose-command
-
-Check your docker compose version with:
-```
-% docker compose version
-Docker Compose version v2.10.2
-```
 
 ## Initial setup
 ```
@@ -67,21 +47,6 @@ docker compose run --rm web bundle update
 docker compose up --build
 ```
 
-## Production build
-
-```
-docker build -f production.Dockerfile .
-```
-
-## Deployment
-
-This app can be hosted wherever Ruby is supported and PostgreSQL databases can be provisioned.
-
-#### Render
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ryanwi/rails7-on-docker)
-
-NOTE: You will need to generate a production secret with `bin/rails secret` and set it as the `SECRET_KEY_BASE` environment variable.
 
 ## Credits/References
 
@@ -92,7 +57,7 @@ Build, Ship, and Run Your Applications Everywhere](https://pragprog.com/titles/r
 * [Ruby on Whales:
 Dockerizing Ruby and Rails development](https://evilmartians.com/chronicles/ruby-on-whales-docker-for-ruby-rails-development)
 
-### Rails 7 with importmaps 
+### Rails 7 with importmaps
 
 * [Alpha preview: Modern JavaScript in Rails 7 without Webpack](https://www.youtube.com/watch?v=PtxZvFnL2i0)
 
@@ -102,12 +67,3 @@ Dockerizing Ruby and Rails development](https://evilmartians.com/chronicles/ruby
 * [Turbo 7](https://world.hey.com/hotwired/turbo-7-0dd7a27f)
 * [Rails 7 will have three great answers to JavaScript in 2021+](https://world.hey.com/dhh/rails-7-will-have-three-great-answers-to-javascript-in-2021-8d68191b)
 * [Hotwire Turbo Replacing Rails UJS](https://www.driftingruby.com/episodes/hotwire-turbo-replacing-rails-ujs)
-
-## Author
-
-**Ryan Williams**
-
-- <https://www.ryanwilliams.dev>
-- <https://twitter.com/ryanwi>
-- <https://hachyderm.io/@ryanwi>
-- <https://github.com/ryanwi>
