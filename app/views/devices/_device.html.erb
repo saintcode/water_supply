@@ -18,23 +18,6 @@
     Created at <%= time_tag device.created_at %>
   </p>
 
-  <%
-=begin%>
- <p>
-    <strong><%= pluralize device.comments.count, "comment" %></strong>
-  </p>
-<%
-=end%>
-
-  <%
-=begin%>
- <p>
-    <strong>Content:</strong>
-    <%= device.content %>
-  </p>
-<%
-=end%>
-
   <p>
     <%= link_to "Show this device", device %>
   </p>
