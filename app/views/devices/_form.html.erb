@@ -25,20 +25,6 @@
     <%= form.input :region_id, as: :select, collection: Region.all, value_method: :id %>
   </div>
 
-  <br>
-  <br>
-  <br>
-
-<%
-=begin%>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.rich_text_area :content %>
-  </div>
-<%
-=end%>
-
   <div class="actions">
     <%= form.submit %>
   </div>
