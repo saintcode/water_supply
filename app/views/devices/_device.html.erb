@@ -1,0 +1,41 @@
+<div id="<%= dom_id device %>" class="scaffold_record">
+  <p>
+    <strong>Device name:</strong>
+    <%= device.title %>
+  </p>
+
+  <p>
+    <strong>Serial number:</strong>
+    <%= device.serial_number %>
+  </p>
+
+  <p>
+    <strong>Region:</strong>
+    <%= device.region.title %>
+  </p>
+
+  <p>
+    Created at <%= time_tag device.created_at %>
+  </p>
+
+  <%
+=begin%>
+ <p>
+    <strong><%= pluralize device.comments.count, "comment" %></strong>
+  </p>
+<%
+=end%>
+
+  <%
+=begin%>
+ <p>
+    <strong>Content:</strong>
+    <%= device.content %>
+  </p>
+<%
+=end%>
+
+  <p>
+    <%= link_to "Show this device", device %>
+  </p>
+</div>

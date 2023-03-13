@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'info', controller: "info", action: "index"
 
-  resources :articles do
+  resources :devices do
     resources :comments
   end
 end

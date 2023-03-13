@@ -1,0 +1,45 @@
+<%= simple_form_for(Device.new) do |form| %>
+  <% if device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device.errors.count, "error") %> prohibited this device from being saved:</h2>
+
+      <ul>
+        <% device.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial_number %>
+    <%= form.text_field :serial_number %>
+  </div>
+
+  <div class="field">
+    <%= form.input :region_id, as: :select, collection: Region.all, value_method: :id %>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+<%
+=begin%>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+<%
+=end%>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,9 +1,19 @@
 <h1>Welcome</h1>
 
-<%= link_to "Articles", articles_path %>
+<%= link_to "Devices", devices_path %>
+
+<br>
+<br>
+
+<% if signed_in? %>
+  <%= link_to current_user.email, edit_user_registration_path %>
+  <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+<% end %>
 
 
-<h2>Stimulus Check</h2>
+<%
+=begin%>
+ <h2>Stimulus Check</h2>
 
 <div data-controller="hello">
   <input data-hello-target="name" type="text">
@@ -15,3 +25,5 @@
   <span data-hello-target="output">
   </span>
 </div>
+<%
+=end%>

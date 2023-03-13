@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
-  before_action :set_article
+  before_action :set_device
 
   def create
-    @article.comments.create! params.required(:comment).permit(:content)
-    redirect_to @article
+    @device.comments.create! params.required(:comment).permit(:content)
+    redirect_to @device
   end
 
   private
-    def set_article
-      @article = Article.find(params[:article_id])
+    def set_device
+      @device = Device.find(params[:device_id])
     end
 end
